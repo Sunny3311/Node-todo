@@ -1,6 +1,6 @@
 FROM node
-MKDIR /app
-WRKDIR /app
+WORKDIR app
 RUN npm install
 COPY . .
 EXPOSE 8000
+CMD ["node", "runserver","8000"]
